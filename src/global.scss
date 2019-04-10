@@ -1,0 +1,23 @@
+@function  vw($px){
+  @return ($px/1080)*100vw
+}
+@mixin  gaodu{
+  width: 100px;
+  height: 100px;
+}
+.box{
+  @include gaodu
+}
+body,html{
+  height: 100%;
+  width: 100%;
+}
+.home{
+  height: 100%;
+  width: 100%;
+}
+.yang{
+  width: 200px;
+  height: 200px;
+  border: 1px solid #000;
+}
