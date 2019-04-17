@@ -1,3 +1,7 @@
+// require('./src/js');
+
+const a = require('./src/hjk');
+
 module.exports = {
 
   // 修改的配置
@@ -11,24 +15,7 @@ module.exports = {
   //   config.resolve.symlinks(true);
   // },
   devServer: {
-    proxy: {
-      '/api': {
-        target: 'http://api.douban.com/v2/movie/top250',
-        changeOrigin: true,
-        ws: true,
-        pathRewrite: {
-          '^/api': '',
-        },
-      },
-      '/xinlang': {
-        target: 'https://www.sina.com.cn',
-        changeOrigin: true,
-        ws: true,
-        pathRewrite: {
-          '^/xinlang': '',
-        },
-      },
-    },
+    proxy: a.proxy,
   },
   css: {
     sourceMap: false,
